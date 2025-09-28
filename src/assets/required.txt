@@ -1,0 +1,17 @@
+    const {
+      Title: title,
+      Year: year,
+      Poster: poster,
+      Runtime: runtime,
+      imdb,
+      Plot: plot,
+      Released: released,
+      Actors: actor,
+      Director: director,
+      Genre: genre,
+    } = movie;
+
+    API KEY
+
+        const KEY = "696ad85d";
+          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
