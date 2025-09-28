@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { X, Star, Calendar, Clock, User, Film } from "lucide-react";
 
 function MovieDetails({ selectedId, onAddWatched, watched, onClose }) {
-  const KEY = "696ad85d";
+  const KEY = import.meta.env.VITE_API_KEY;
   const sidebarRef = useRef(null);
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
   const [movie, setMovie] = useState({});
@@ -62,7 +62,7 @@ function MovieDetails({ selectedId, onAddWatched, watched, onClose }) {
       try {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
         );
         const data = await res.json();
         setMovie(data);
