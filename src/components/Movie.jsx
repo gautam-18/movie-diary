@@ -16,7 +16,7 @@ function Movie({ movie, onSelectMovie, index, hovered, setHovered }) {
       />
 
       <div
-        className={`absolute inset-0 bg-black/50 flex flex-col items-start justify-end p-4 transition-opacity duration-300 
+        className={`absolute inset-0 bg-black/30 flex flex-col items-start justify-end p-4 transition-opacity duration-300 
           ${hovered === index ? "opacity-100" : "opacity-0"}`}
       >
         <h1 className="text-white font-semibold text-lg mb-1">{movie.Title}</h1>
